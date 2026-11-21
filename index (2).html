@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KitHunter FC – Επίσημες εμφανίσεις ποδοσφαίρου στην καλύτερη τιμή</title>
+<meta name="description" content="KitHunter FC: βρες επίσημες εμφανίσεις ποδοσφαίρου (και παιδικές) στην καλύτερη τιμή της Ευρώπης, μέσα από το Telegram.">
+<style>
+  :root{
+    --bg:#0b1f14; --bg2:#10291b; --card:#143322; --line:#1f4a31;
+    --text:#eef6f0; --muted:#a9c2b2; --accent:#3ddc84; --accent2:#ffd54a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:var(--accent)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .logo{font-weight:800;font-size:1.25rem;letter-spacing:.5px}
+  .logo span{color:var(--accent)}
+  .lang button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:6px 10px;border-radius:8px;cursor:pointer;font-size:.9rem}
+  .lang button.on{border-color:var(--accent);color:var(--text)}
+  .hero{padding:56px 0 40px;text-align:center}
+  .hero h1{font-size:2.1rem;line-height:1.25;margin-bottom:14px}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p{color:var(--muted);font-size:1.08rem;max-width:620px;margin:0 auto 26px}
+  .btn{display:inline-block;background:var(--accent);color:#06210f;font-weight:700;text-decoration:none;padding:14px 26px;border-radius:12px;font-size:1.05rem}
+  .btn:active{transform:scale(.98)}
+  .demo{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;max-width:440px;margin:34px auto 0;text-align:left;font-size:.95rem}
+  .demo .q{color:var(--accent2);margin-bottom:10px}
+  .demo .row{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:7px 0}
+  .demo .best{color:var(--accent);font-weight:700}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  h2{font-size:1.45rem;margin-bottom:20px;text-align:center}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card .ic{font-size:1.7rem;margin-bottom:8px}
+  .card h3{font-size:1.05rem;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.95rem}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:600}
+  details p{color:var(--muted);margin-top:8px;font-size:.95rem}
+  .small{color:var(--muted);font-size:.9rem}
+  footer{padding:30px 0 40px;border-top:1px solid var(--line);text-align:center}
+  [data-lang]{display:none}
+  body.el [data-lang="el"], body.en [data-lang="en"]{display:revert}
+  @media(max-width:520px){.hero h1{font-size:1.7rem}}
+</style>
+</head>
+<body class="el">
+<div class="wrap">
+
+<header>
+  <div class="logo">⚽ KitHunter <span>FC</span></div>
+  <div class="lang">
+    <button id="b-el" class="on" onclick="setLang('el')">ΕΛ</button>
+    <button id="b-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="hero">
+  <h1 data-lang="el">Επίσημες εμφανίσεις ποδοσφαίρου<br>στην <em>καλύτερη τιμή της Ευρώπης</em></h1>
+  <h1 data-lang="en">Official football kits<br>at the <em>best price in Europe</em></h1>
+
+  <p data-lang="el">Γράψε την ομάδα και το νούμερο που θέλεις. Το KitHunter FC συγκρίνει τιμές από επίσημα καταστήματα σε όλη την Ευρώπη και σου δείχνει πού είναι φθηνότερα, μαζί με τα μεταφορικά. Όλα μέσα στο Telegram.</p>
+  <p data-lang="en">Type the team and size you want. KitHunter FC compares prices from official stores across Europe and shows you where it's cheapest, shipping included. All inside Telegram.</p>
+
+  <a class="btn" href="https://t.me/KitHunterFCBot">
+    <span data-lang="el">Άνοιξε το bot στο Telegram</span>
+    <span data-lang="en">Open the bot on Telegram</span>
+  </a>
+
+  <div class="demo">
+    <div class="q" data-lang="el">🔎 «Ρεάλ Μαδρίτης εντός, 10 ετών»</div>
+    <div class="q" data-lang="en">🔎 "Real Madrid home, age 10"</div>
+    <div class="row"><span>🏪 <span data-lang="el">Κατάστημα Α</span><span data-lang="en">Store A</span></span><span class="best">✅ 45€</span></div>
+    <div class="row"><span>🏪 <span data-lang="el">Κατάστημα Β</span><span data-lang="en">Store B</span></span><span>59€</span></div>
+    <div class="row"><span>🏪 <span data-lang="el">Κατάστημα Γ</span><span data-lang="en">Store C</span></span><span>75€</span></div>
+    <div class="small" style="margin-top:8px" data-lang="el">Ενδεικτικό παράδειγμα</div>
+    <div class="small" style="margin-top:8px" data-lang="en">Illustrative example</div>
+  </div>
+</div>
+
+<section>
+  <h2 data-lang="el">Πώς δουλεύει</h2>
+  <h2 data-lang="en">How it works</h2>
+  <div class="grid">
+    <div class="card"><div class="ic">💬</div>
+      <h3 data-lang="el">1. Γράψε τι ψάχνεις</h3><h3 data-lang="en">1. Tell us what you want</h3>
+      <p data-lang="el">Ομάδα ή εθνική, εντός/εκτός και νούμερο (και παιδικά).</p>
+      <p data-lang="en">Club or national team, home/away and size (kids too).</p></div>
+    <div class="card"><div class="ic">🔍</div>
+      <h3 data-lang="el">2. Συγκρίνουμε</h3><h3 data-lang="en">2. We compare</h3>
+      <p data-lang="el">Ψάχνουμε σε επίσημα καταστήματα στην Ευρώπη που στέλνουν στη χώρα σου.</p>
+      <p data-lang="en">We search official stores in Europe that ship to your country.</p></div>
+    <div class="card"><div class="ic">💶</div>
+      <h3 data-lang="el">3. Διαλέγεις</h3><h3 data-lang="en">3. You choose</h3>
+      <p data-lang="el">Βλέπεις τιμές με μεταφορικά και αγοράζεις απευθείας από το κατάστημα.</p>
+      <p data-lang="en">See prices with shipping and buy directly from the store.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 data-lang="el">Γιατί KitHunter FC</h2>
+  <h2 data-lang="en">Why KitHunter FC</h2>
+  <div class="grid">
+    <div class="card"><div class="ic">✅</div>
+      <h3 data-lang="el">Μόνο γνήσια</h3><h3 data-lang="en">Genuine only</h3>
+      <p data-lang="el">Μόνο επίσημα και εξουσιοδοτημένα καταστήματα. Όχι άγνωστοι πωλητές.</p>
+      <p data-lang="en">Only official and authorised stores. No unknown sellers.</p></div>
+    <div class="card"><div class="ic">👕</div>
+      <h3 data-lang="el">Και παιδικά</h3><h3 data-lang="en">Kids sizes</h3>
+      <p data-lang="el">Ψάχνεις με ηλικία ή εκατοστά, εμείς βρίσκουμε το σωστό νούμερο.</p>
+      <p data-lang="en">Search by age or height and we match the right size.</p></div>
+    <div class="card"><div class="ic">🔔</div>
+      <h3 data-lang="el">Ειδοποιήσεις</h3><h3 data-lang="en">Price alerts</h3>
+      <p data-lang="el">Σου στέλνουμε μήνυμα όταν πέσει η τιμή στη φανέλα που θέλεις.</p>
+      <p data-lang="en">We message you when the price of your kit drops.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 data-lang="el">Συχνές ερωτήσεις</h2>
+  <h2 data-lang="en">FAQ</h2>
+
+  <details><summary data-lang="el">Κοστίζει κάτι;</summary><summary data-lang="en">Does it cost anything?</summary>
+    <p data-lang="el">Όχι. Η αναζήτηση είναι δωρεάν.</p>
+    <p data-lang="en">No. Searching is free.</p></details>
+
+  <details><summary data-lang="el">Πουλάτε εσείς τις φανέλες;</summary><summary data-lang="en">Do you sell the kits?</summary>
+    <p data-lang="el">Όχι. Δεν πουλάμε προϊόντα. Σε στέλνουμε στο site του καταστήματος και η αγορά γίνεται εκεί, με τους όρους του καταστήματος.</p>
+    <p data-lang="en">No. We don't sell products. We send you to the store's website and you buy there, under the store's own terms.</p></details>
+
+  <details><summary data-lang="el">Πώς βγάζετε χρήματα;</summary><summary data-lang="en">How do you make money?</summary>
+    <p data-lang="el">Κάποια links είναι affiliate links: αν αγοράσεις μέσα από αυτά, το κατάστημα μας δίνει μια μικρή προμήθεια. Εσύ δεν πληρώνεις τίποτα παραπάνω, και η σειρά των αποτελεσμάτων γίνεται με βάση την τιμή.</p>
+    <p data-lang="en">Some links are affiliate links: if you buy through them, the store pays us a small commission. You pay nothing extra, and results are ranked by price.</p></details>
+
+  <details><summary data-lang="el">Σε ποιες χώρες;</summary><summary data-lang="en">Which countries?</summary>
+    <p data-lang="el">Ξεκινάμε με Ελλάδα και Κύπρο, και σύντομα προσθέτουμε κι άλλες χώρες της ΕΕ.</p>
+    <p data-lang="en">We start with Greece and Cyprus, with more EU countries coming soon.</p></details>
+</section>
+
+<section id="privacy">
+  <h2 data-lang="el">Απόρρητο</h2>
+  <h2 data-lang="en">Privacy</h2>
+  <p class="small" data-lang="el">Το bot κρατάει μόνο ό,τι χρειάζεται για να λειτουργήσει: το Telegram ID σου, τη γλώσσα, τη χώρα παράδοσης και τις ειδοποιήσεις που έχεις ζητήσει. Δεν πουλάμε και δεν μοιραζόμαστε τα δεδομένα σου. Μπορείς να ζητήσεις διαγραφή τους οποιαδήποτε στιγμή στέλνοντας /delete στο bot ή με email.</p>
+  <p class="small" data-lang="en">The bot only stores what it needs to work: your Telegram ID, language, delivery country and the alerts you set. We don't sell or share your data. You can ask for deletion at any time by sending /delete to the bot or by email.</p>
+</section>
+
+<footer>
+  <p class="small" data-lang="el">Επικοινωνία: <a href="mailto:Pkab1972@gmail.com">Pkab1972@gmail.com</a></p>
+  <p class="small" data-lang="en">Contact: <a href="mailto:Pkab1972@gmail.com">Pkab1972@gmail.com</a></p>
+  <p class="small" style="margin-top:8px" data-lang="el">Το KitHunter FC είναι ανεξάρτητη υπηρεσία σύγκρισης τιμών και δεν συνδέεται με ομάδες, ομοσπονδίες ή κατασκευαστές. Τα ονόματα ομάδων και brands ανήκουν στους κατόχους τους.</p>
+  <p class="small" style="margin-top:8px" data-lang="en">KitHunter FC is an independent price comparison service and is not affiliated with any club, federation or manufacturer. Team and brand names belong to their owners.</p>
+  <p class="small" style="margin-top:8px">© 2026 KitHunter FC</p>
+</footer>
+
+</div>
+<script>
+  function setLang(l){
+    document.body.className = l;
+    document.documentElement.lang = l;
+    document.getElementById('b-el').classList.toggle('on', l==='el');
+    document.getElementById('b-en').classList.toggle('on', l==='en');
+    try{ localStorage.setItem('kh_lang', l); }catch(e){}
+  }
+  (function(){
+    var l = null;
+    try{ l = localStorage.getItem('kh_lang'); }catch(e){}
+    if(!l){ l = (navigator.language||'el').toLowerCase().indexOf('el')===0 ? 'el' : 'en'; }
+    setLang(l);
+  })();
+</script>
+</body>
+</html>
